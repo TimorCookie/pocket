@@ -1,0 +1,4 @@
+<view>
+	<button data-type="album" bindtap="uploadImg">相册选取</button>
+	<button data-type="camera" bindtap="uploadImg">立即拍摄</button>
+</view>

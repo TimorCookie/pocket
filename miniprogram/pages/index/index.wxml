@@ -1,0 +1,3 @@
+<view>
+<button bindtap="goAIImg">植物识别</button>
+</view>

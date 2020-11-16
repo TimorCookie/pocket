@@ -1,0 +1,15 @@
+<view wx:if="{{info}}">
+	<image src="{{imgUrl}}" mode="aspectFit"></image>
+  <view>
+    <view>信息如下：</view>
+    <view wx:for="{{info}}" wx:key="name">
+      <view>名称：{{item.name}}</view>
+      <view>准确率：{{item.score * 100}}%</view>
+      <view wx:if="{{item.baike_info}}">
+        <view>百科相关：</view>
+        <view>链接：{{item.baike_info.baike_url}}</view>
+        <view wx:if="{{item.baike_info.description}}">百科描述：{{item.baike_info.description}}</view>
+      </view>
+    </view>
+  </view>
+</view>
