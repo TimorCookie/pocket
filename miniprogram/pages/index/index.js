@@ -77,6 +77,12 @@ Page({
   },
   handleTap(event) {
     const target = event.currentTarget.dataset.route
+    if(!target) {
+      return wx.showToast({
+        title: '开发中...',
+        icon: 'none'
+      })
+    }
     wx.navigateTo({
       url: `${target}`
     })

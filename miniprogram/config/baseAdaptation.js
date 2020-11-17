@@ -46,7 +46,8 @@ export const baseAdaptation = () =>{
       id: '6',
       name: '归属地',
       type: 'mobilelocal',
-      img: 'https://www.tianapi.com/static/img/apiico/mobilelocal.png'
+      img: 'https://www.tianapi.com/static/img/apiico/mobilelocal.png',
+      target: '/pages/mobile/mobile'
     },
     {
       id: '7',

@@ -1,0 +1,22 @@
+<view class="mobile-check">
+  <input
+      auto-focus 
+      placeholder="请输入手机号" 
+      class="mobile-input" 
+      maxlength="11"
+      bindinput="handleInput"
+  />
+  <button class="mobile-search-btn" bindtap="searchRes">搜 索</button>
+</view>
+
+<view class="mobile-attribution">
+	<view class="area">
+		归属地：{{info.mobileprovice}} - {{info.mobilearea}}
+	</view>
+	<view>
+		运营商：{{info.mobiletype}}
+	</view>
+	<view>
+		邮 编：{{info.postcode}}
+	</view>
+</view>

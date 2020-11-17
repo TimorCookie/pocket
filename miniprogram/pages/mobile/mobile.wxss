@@ -1,0 +1,20 @@
+/* miniprogram/pages/mobile/mobile.wxss */
+.mobile-input {
+  width: 600rpx;
+  height: 80rpx;
+  background-color: #eee;
+  border-radius: 100rpx;
+  margin: 0 auto;
+  padding: 0 40rpx;
+  line-height: 80rpx;
+}
+.mobile-search-btn {
+  display: block;
+  background-color: #29C07B;
+  color: #fff;
+  font-weight: bold;
+  font-size: 32rpx;
+  border-radius: 999rpx;
+  width: 40rpx;
+  margin: 40rpx auto;
+}

@@ -23,13 +23,13 @@ export const api_tianBase = (opts)=> {
       },
       complete: (res)=>{
         if (res.data.code === 200 && res.data.msg === 'success') {
-          resolve(result)
+          resolve(res)
+        } else {
+          wx.showToast({
+            title: res.data.msg,
+            icon: 'none'
+          })
         }
-        console.log(res.data.msg)
-        wx.showToast({
-          title: res.data.msg,
-          icon: 'none'
-        })
       }
     });
   })

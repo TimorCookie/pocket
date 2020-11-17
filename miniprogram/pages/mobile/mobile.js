@@ -1,4 +1,4 @@
-// miniprogram/pages/dream/dream.js
+// miniprogram/pages/mobile/mobile.js
 import {api_tianBase} from '../../service/api'
 Page({
 
@@ -6,8 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    text: '',
-    list: []
+    mobile: 0,
+    info: {}
   },
 
   /**
@@ -65,25 +65,23 @@ Page({
   onShareAppMessage: function () {
 
   },
+  handleInput (event) {
+    this.setData({
+      mobile: event.detail.value
+    })
+  },
   searchRes () {
     api_tianBase({
-      apiName: 'dream',
+      apiName: 'mobilelocal',
       data: {
-        num: 10,
-        word: `${this.data.text}`
+        phone: `${this.data.mobile}`
       }
     }).then(res => {
       if (res.data.code === 200 && res.data.msg === 'success') {
         this.setData({
-          list: res.data.newslist
+          info: res.data.newslist[0]
         })
       }
-    })
-    // console.log(this.data.text)
-  },
-  handleInput (event) {
-    this.setData({
-      text: event.detail.value
     })
   }
 })

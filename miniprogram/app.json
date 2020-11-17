@@ -4,7 +4,8 @@
     "pages/AI/image/recognition/recognition",
     "pages/AI/image/detail/detail",
     "pages/rainbow/rainbow",
-    "pages/dream/dream"
+    "pages/dream/dream",
+    "pages/mobile/mobile"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
