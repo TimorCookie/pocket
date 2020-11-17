@@ -68,7 +68,7 @@ Page({
     wx.chooseImage({
       count: 1,
       sizeType: ['compressed'],
-      sourceType,
+      sourceType: [sourceType],
       success (res) {
         // tempFilePath可以作为img标签的src属性显示图片
         const tempFilePaths = res.tempFilePaths
@@ -82,6 +82,7 @@ Page({
             url: `/pages/AI/image/detail/detail?fileID=${res.fileID}`,
           })
         }).catch(error => {
+          console.log(error)
           // handle error
         })
       }

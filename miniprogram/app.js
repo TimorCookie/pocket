@@ -1,5 +1,7 @@
 //app.js
+import { promisifyAll } from 'miniprogram-api-promise';
 App({
+  wxp: {},
   onLaunch: function () {
     
     if (!wx.cloud) {
@@ -16,5 +18,8 @@ App({
     }
 
     this.globalData = {}
+    // 将wx上的方法，转换为wxp行的pr方法
+    // promisify all wx's api
+    promisifyAll(wx, this.wxp)
   }
 })

@@ -1,3 +1,14 @@
-<view>
-<button bindtap="goAIImg">植物识别</button>
+<view class="home-page">
+  <view class="home-header" hover-class="none" hover-stop-propagation="false">
+  </view>
+  <view class="tool-box" hover-class="none" hover-stop-propagation="false" bindtap="goAIImg" >
+    <button class="tool-item" hover-class="none" hover-stop-propagation="false" wx:for="{{baseList}}">
+      <view class="item-wrapper">
+        <image src="{{item.img}}" alt="" class="item-icon"/>
+        <text class="item-type" selectable="false" space="false" decode="false">
+          {{item.name}}
+        </text>
+      </view>
+    </button>
+  </view>
 </view>
