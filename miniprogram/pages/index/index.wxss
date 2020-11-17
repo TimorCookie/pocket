@@ -4,8 +4,17 @@ page {}
 
 .home-page {
   width: 100%;
+  color: #404040;
 }
-
+.home-header {
+  font-size: 32rpx;
+  padding: 32rpx 120rpx;
+  text-align: left;
+}
+.one-author {
+  margin-top: 20rpx;
+  text-align: right;
+}
 .tool-box {
   width: 100%;
   display: flex;
@@ -15,9 +24,8 @@ page {}
 }
 
 .tool-item {
-  color: #404040;
   font-size: 28rpx;
-  
+  color: #404040;
 }
 .item-wrapper {
   border: 2rpx solid #eee;

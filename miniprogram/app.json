@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/AI/image/recognition/recognition",
-    "pages/AI/image/detail/detail"
+    "pages/AI/image/detail/detail",
+    "pages/rainbow/rainbow"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

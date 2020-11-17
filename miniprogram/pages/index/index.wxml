@@ -1,8 +1,17 @@
 <view class="home-page">
   <view class="home-header" hover-class="none" hover-stop-propagation="false">
+    <text class="one-date" selectable="false" space="false" decode="false">
+      {{infoOne.date}}
+    </text>
+    <text class="one-content" selectable="false" space="false" decode="false">
+      {{infoOne.word?infoOne.word:'好春光不如梦一场 ~'}}
+    </text>
+    <view class="one-author" selectable="false" space="false" decode="false">
+      --{{infoOne.wordfrom?infoOne.wordfrom:'佚名'}}
+    </view>
   </view>
-  <view class="tool-box" hover-class="none" hover-stop-propagation="false" bindtap="goAIImg" >
-    <button class="tool-item" hover-class="none" hover-stop-propagation="false" wx:for="{{baseList}}">
+  <view class="tool-box" hover-class="none" hover-stop-propagation="false">
+    <button class="tool-item" hover-class="none" hover-stop-propagation="false" wx:for="{{baseList}}" wx:key="name" bindtap="handleTap" data-route="{{item.target}}">
       <view class="item-wrapper">
         <image src="{{item.img}}" alt="" class="item-icon"/>
         <text class="item-type" selectable="false" space="false" decode="false">

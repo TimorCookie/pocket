@@ -1,5 +1,5 @@
-import { baseAdaptation } from '../../config/baseAdaptation'
-import { APIKEY, api_one } from '../../config/tianapi'
+// miniprogram/pages/rainbow/rainbow.js
+import { APIKEY, api_caihongpi } from '../../config/tianapi'
 const app = getApp()
 Page({
 
@@ -7,24 +7,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-    baseList: baseAdaptation(),
-    infoOne: {}
+    apiData: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 获取one语录
-    // app.wxp.request ({
-    //   url: `${api_one}?key=${APIKEY}`
-    // }).then(res => {
-    //   if (res.data.code === 200 && res.data.msg === 'success') {
-    //     this.setData({
-    //       infoOne: res.data.newslist[0]
-    //     })
-    //   }
-    // })
+    app.wxp.request ({
+      url: `${api_caihongpi}?key=${APIKEY}`
+    }).then(res => {
+      if (res.data.code === 200 && res.data.msg === 'success') {
+        this.setData({
+          apiData: res.data.newslist[0]
+        })
+      }
+    })
   },
 
   /**
@@ -74,11 +72,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  handleTap(event) {
-    const target = event.currentTarget.dataset.route
-    wx.navigateTo({
-      url: `${target}`
-    })
   }
 })

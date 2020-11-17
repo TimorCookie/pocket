@@ -4,13 +4,15 @@ export const baseAdaptation = () =>{
       id: '0',
       name: '植物识别',
       type: 'aizhiwu',
-      img: 'https://www.tianapi.com/static/img/apiico/scenic.png'
+      img: 'https://www.tianapi.com/static/img/apiico/scenic.png',
+      target: '/pages/AI/image/recognition/recognition'
     },
     {
       id: '1',
       name: '彩虹屁',
       type: 'caihongpi',
-      img: 'https://www.tianapi.com/static/img/apiico/caihongpi.png'
+      img: 'https://www.tianapi.com/static/img/apiico/caihongpi.png',
+      target: '/pages/rainbow/rainbow?type=fart'
     },
     {
       id: '2',
