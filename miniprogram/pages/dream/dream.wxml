@@ -1,0 +1,16 @@
+<view class="dream-scene">
+	<input
+    auto-focus 
+    placeholder="请输入梦境(关键词)..." 
+    class="scene-input" 
+    maxlength="20"
+    bindinput="handleInput"
+  />
+	<button class="scene-search-btn" bindtap="searchRes">搜 索</button>
+</view>
+<view class="dream-analysis">
+	<view wx:for="{{list}}" wx:key="id">
+    <view>关键词：{{item.title}}</view>
+		<rich-text>解析：{{item.result}}</rich-text>
+	</view>
+</view>

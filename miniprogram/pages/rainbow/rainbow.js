@@ -1,5 +1,5 @@
 // miniprogram/pages/rainbow/rainbow.js
-import { APIKEY, api_caihongpi } from '../../config/tianapi'
+import {api_tianBase} from '../../service/api'
 const app = getApp()
 Page({
 
@@ -14,8 +14,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    app.wxp.request ({
-      url: `${api_caihongpi}?key=${APIKEY}`
+    api_tianBase({
+      apiName: `${options.type}`
     }).then(res => {
       if (res.data.code === 200 && res.data.msg === 'success') {
         this.setData({

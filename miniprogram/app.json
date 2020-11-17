@@ -3,13 +3,14 @@
     "pages/index/index",
     "pages/AI/image/recognition/recognition",
     "pages/AI/image/detail/detail",
-    "pages/rainbow/rainbow"
+    "pages/rainbow/rainbow",
+    "pages/dream/dream"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "提莫百宝箱",
+    "navigationBarTitleText": "浪里小提莫儿",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",

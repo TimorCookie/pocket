@@ -1,6 +1,6 @@
 import { baseAdaptation } from '../../config/baseAdaptation'
-import { APIKEY, api_one } from '../../config/tianapi'
-const app = getApp()
+import {api_tianBase} from '../../service/api'
+
 Page({
 
   /**
@@ -16,15 +16,15 @@ Page({
    */
   onLoad: function (options) {
     // 获取one语录
-    // app.wxp.request ({
-    //   url: `${api_one}?key=${APIKEY}`
-    // }).then(res => {
-    //   if (res.data.code === 200 && res.data.msg === 'success') {
-    //     this.setData({
-    //       infoOne: res.data.newslist[0]
-    //     })
-    //   }
-    // })
+    api_tianBase({
+      apiName: 'one'
+    }).then(res => {
+      if (res.data.code === 200 && res.data.msg === 'success') {
+        this.setData({
+          infoOne: res.data.newslist[0]
+        })
+      }
+    })
   },
 
   /**

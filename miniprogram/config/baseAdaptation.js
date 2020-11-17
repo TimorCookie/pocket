@@ -12,31 +12,35 @@ export const baseAdaptation = () =>{
       name: '彩虹屁',
       type: 'caihongpi',
       img: 'https://www.tianapi.com/static/img/apiico/caihongpi.png',
-      target: '/pages/rainbow/rainbow?type=fart'
+      target: '/pages/rainbow/rainbow?type=caihongpi'
     },
     {
       id: '2',
       name: '舔狗日记',
       type: 'tiangou',
-      img:'https://www.tianapi.com/static/img/apiico/tiangou.png'
+      img:'https://www.tianapi.com/static/img/apiico/tiangou.png',
+      target: '/pages/rainbow/rainbow?type=tiangou'
     },
     {
       id: '3',
       name: '网易云热评',
       type: 'hotreview',
-      img: 'https://www.tianapi.com/static/img/apiico/hotreview.png'
+      img: 'https://www.tianapi.com/static/img/apiico/hotreview.png',
+      target: '/pages/rainbow/rainbow?type=hotreview'
     },
     {
       id: '4',
       name: '土味情话',
       type: 'saylove',
-      img: 'https://www.tianapi.com/static/img/apiico/saylove.png'
+      img: 'https://www.tianapi.com/static/img/apiico/saylove.png',
+      target: '/pages/rainbow/rainbow?type=saylove'
     },
     {
       id: '5',
       name: '周公解梦',
       type: 'dream',
       img: 'https://www.tianapi.com/static/img/apiico/dream.png',
+      target: '/pages/dream/dream'
     },
     {
       id: '6',
