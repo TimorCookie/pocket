@@ -7,10 +7,8 @@ button::after {
 button {
   border-radius:0;
   background-color: transparent;
-  padding-left: 0;
-  padding-right: 0;
   line-height:inherit;
-
+  padding: 0;
 }
 view {
   box-sizing: border-box;

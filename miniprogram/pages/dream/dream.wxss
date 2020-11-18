@@ -17,6 +17,9 @@
   font-weight: bold;
   font-size: 32rpx;
   border-radius: 999rpx;
-  width: 40rpx;
+  width: 140rpx;
+  height: 60rpx;
+  line-height: 60rpx;
   margin: 40rpx auto;
+  text-align: center;
 }

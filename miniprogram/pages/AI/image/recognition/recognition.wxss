@@ -1,1 +1,11 @@
 /* pages/AI/image/recognition/recognition.wxss */
+.choose-btn {
+  background-color: #29C07B;
+  width: 160rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 99rpx;
+  text-align: center;
+  color: #fff;
+  margin: 40rpx auto;
+}

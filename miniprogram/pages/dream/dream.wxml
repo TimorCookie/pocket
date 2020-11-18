@@ -6,7 +6,7 @@
     maxlength="20"
     bindinput="handleInput"
   />
-	<button class="scene-search-btn" bindtap="searchRes">搜 索</button>
+	<view class="scene-search-btn" bindtap="searchRes">搜 索</view>
 </view>
 <view class="dream-analysis">
 	<view wx:for="{{list}}" wx:key="id">

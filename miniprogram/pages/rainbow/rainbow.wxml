@@ -1,3 +1,9 @@
-<view class="" hover-class="none" hover-stop-propagation="false">
-  {{apiData.content}}
+<view class="rainbow-page" hover-class="none" hover-stop-propagation="false">
+  <view class="rainbow-content" hover-class="none" hover-stop-propagation="false">
+    {{apiData.content}}
+  </view>
+  <view class="action-btns" hover-class="none" hover-stop-propagation="false">
+    <view class="btns-item change-btn" bind:tap="copyData">复制</view>
+    <view class="btns-item change-btn" bind:tap="getInfo">换一个</view>
+  </view>
 </view>

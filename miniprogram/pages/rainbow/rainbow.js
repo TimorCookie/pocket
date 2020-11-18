@@ -1,6 +1,6 @@
 // miniprogram/pages/rainbow/rainbow.js
 import { api_tianxing } from '../../service/cloudAPI'
-
+const app = getApp()
 Page({
 
   /**
@@ -14,13 +14,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    api_tianxing({
-      apiName: `${options.type}`
-    }).then(res => {
-      this.setData({
-        apiData: res.newslist[0]
-      })
-    })
+    this.getInfo()
   },
 
   /**
@@ -70,5 +64,22 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  getInfo: function () {
+    let options = this.options
+    api_tianxing({
+      apiName: `${options.type}`
+    }).then(res => {
+      this.setData({
+        apiData: res.newslist[0]
+      })
+    })
+  },
+  copyData: function() {
+    let data= this.data.apiData.content
+    app.wxp.setClipboardData({
+      data 
+    })
   }
+  
 })

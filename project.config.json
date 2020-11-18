@@ -72,8 +72,15 @@
 				},
 				{
 					"id": 2,
-					"name": "pages/rainbow/rainbow",
+					"name": "彩虹屁",
 					"pathName": "pages/rainbow/rainbow",
+					"query": "type=caihongpi",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "植物选取",
+					"pathName": "pages/AI/image/recognition/recognition",
 					"query": "type=caihongpi",
 					"scene": null
 				}
