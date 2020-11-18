@@ -11,13 +11,13 @@
     </view>
   </view>
   <view class="tool-box" hover-class="none" hover-stop-propagation="false">
-    <button class="tool-item" hover-class="none" hover-stop-propagation="false" wx:for="{{baseList}}" wx:key="name" bindtap="handleTap" data-route="{{item.target}}">
+    <view class="tool-item" hover-class="none" hover-stop-propagation="false" wx:for="{{baseList}}" wx:key="name" bindtap="handleTap" data-route="{{item.target}}">
       <view class="item-wrapper">
         <image src="{{item.img}}" alt="" class="item-icon"/>
         <text class="item-type" selectable="false" space="false" decode="false">
           {{item.name}}
         </text>
       </view>
-    </button>
+    </view>
   </view>
 </view>

@@ -12,3 +12,6 @@ button {
   line-height:inherit;
 
 }
+view {
+  box-sizing: border-box;
+}

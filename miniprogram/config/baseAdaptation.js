@@ -54,6 +54,30 @@ export const baseAdaptation = () =>{
       name: '星座配对',
       type: 'xingzuo',
       img: 'https://www.tianapi.com/static/img/apiico/xingzuo.png'
+    },
+    {
+      id: '8',
+      name: '九宫格',
+      type: 'jiugongge',
+      img: 'https://www.tianapi.com/static/img/apiico/htmlpic.png'
+    },
+    {
+      id: '9',
+      name: '二维码',
+      type: 'erweima',
+      img: 'https://www.tianapi.com/static/img/apiico/ewm.png'
+    },
+    {
+      id: '10',
+      name: '字典',
+      type: 'zidian',
+      img: 'https://www.tianapi.com/static/img/apiico/ewm.png'
+    },
+    {
+      id: '11',
+      name: '语音识别',
+      type: 'yuyin',
+      img: 'https://www.tianapi.com/static/img/apiico/fanyi.png'
     }
   ]
 }

@@ -15,13 +15,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 获取one语录
-    api_tianBase({
-      apiName: 'one'
-    }).then(res => {
-      if (res.data.code === 200 && res.data.msg === 'success') {
+    wx.cloud.callFunction({
+      name: 'demo',
+      data: {
+        apiName: 'one'
+      }
+    }).then(res=> {
+      if (res.result.info.code === 200 && res.result.info.msg === 'success') {
         this.setData({
-          infoOne: res.data.newslist[0]
+          infoOne: res.result.info.newslist[0]
         })
       }
     })
