@@ -1,5 +1,5 @@
 // miniprogram/pages/dream/dream.js
-import {api_tianBase} from '../../service/api'
+import { api_tianxing } from '../../service/cloudAPI'
 Page({
 
   /**
@@ -66,18 +66,16 @@ Page({
 
   },
   searchRes () {
-    api_tianBase({
+    api_tianxing({
       apiName: 'dream',
       data: {
         num: 10,
         word: `${this.data.text}`
       }
     }).then(res => {
-      if (res.data.code === 200 && res.data.msg === 'success') {
-        this.setData({
-          list: res.data.newslist
-        })
-      }
+      this.setData({
+        list: res.newslist
+      })
     })
     // console.log(this.data.text)
   },

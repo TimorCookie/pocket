@@ -1,5 +1,5 @@
 // miniprogram/pages/mobile/mobile.js
-import {api_tianBase} from '../../service/api'
+import { api_tianxing } from '../../service/cloudAPI'
 Page({
 
   /**
@@ -71,17 +71,15 @@ Page({
     })
   },
   searchRes () {
-    api_tianBase({
+    api_tianxing({
       apiName: 'mobilelocal',
       data: {
         phone: `${this.data.mobile}`
       }
     }).then(res => {
-      if (res.data.code === 200 && res.data.msg === 'success') {
-        this.setData({
-          info: res.data.newslist[0]
-        })
-      }
+      this.setData({
+        info: res.newslist[0]
+      })
     })
   }
 })

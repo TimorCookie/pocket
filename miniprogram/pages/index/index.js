@@ -1,5 +1,5 @@
 import { baseAdaptation } from '../../config/baseAdaptation'
-import {api_tianBase} from '../../service/api'
+import { api_tianxing } from '../../service/cloudAPI'
 
 Page({
 
@@ -15,17 +15,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.cloud.callFunction({
-      name: 'demo',
-      data: {
-        apiName: 'one'
-      }
+    api_tianxing({
+      apiName: 'one'
     }).then(res=> {
-      if (res.result.info.code === 200 && res.result.info.msg === 'success') {
-        this.setData({
-          infoOne: res.result.info.newslist[0]
-        })
-      }
+      this.setData({
+        infoOne: res.newslist[0]
+      })
     })
   },
 
@@ -79,7 +74,7 @@ Page({
   },
   handleTap(event) {
     const target = event.currentTarget.dataset.route
-    if(!target) {
+    if (!target) {
       return wx.showToast({
         title: '开发中...',
         icon: 'none'

@@ -67,6 +67,14 @@
 					"id": -1,
 					"name": "周公解梦",
 					"pathName": "pages/dream/dream",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/rainbow/rainbow",
+					"pathName": "pages/rainbow/rainbow",
+					"query": "type=caihongpi",
 					"scene": null
 				}
 			]

@@ -9,7 +9,7 @@
   <button class="mobile-search-btn" bindtap="searchRes">搜 索</button>
 </view>
 
-<view class="mobile-attribution">
+<view class="mobile-attribution" wx:if="{{info.mobileprovice}}">
 	<view class="area">
 		归属地：{{info.mobileprovice}} - {{info.mobilearea}}
 	</view>

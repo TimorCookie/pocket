@@ -1,6 +1,6 @@
 // miniprogram/pages/rainbow/rainbow.js
-import {api_tianBase} from '../../service/api'
-const app = getApp()
+import { api_tianxing } from '../../service/cloudAPI'
+
 Page({
 
   /**
@@ -14,14 +14,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    api_tianBase({
+    api_tianxing({
       apiName: `${options.type}`
     }).then(res => {
-      if (res.data.code === 200 && res.data.msg === 'success') {
-        this.setData({
-          apiData: res.data.newslist[0]
-        })
-      }
+      this.setData({
+        apiData: res.newslist[0]
+      })
     })
   },
 
